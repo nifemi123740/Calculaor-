@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator.com</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <p>Simple calculator in js. The numbers are 10 and 2</p>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="result"></p>
+    <p id="div"></p>
+    <button onclick="add()">ADD</button>
+    <button onclick="sub()">SUBTRACT</button>
+    <button onclick="multiply(10)">MULTIPLY</button>
+    <button onclick="div()">DIVIDE</button>
+    <script>
+        function add(){
+           var num1= 10;
+           var num2= 2;
+           var add= num1 + num2;
+           document.getElementById("add").innerHTML="The added value is:" +add;
+        }
+        function sub(){
+            var num1= 10;
+            var num2= 2;
+            var sub= num1 - num2;
+            document.getElementById("sub").innerHTML="The subtracted value is:" +sub;
+        }
+        function multiply(a,b) {
+            if(b === undefined){
+                alert ("The value of b is undefined");
+                b=2;
+            }
+            var result = a * b
+            document.getElementById("result").innerHTML="The multiplied value is:" +result;
+        }
+        function div(){
+            var num1= 10;
+            var num2= 2;
+            var div= num1 / num2;
+            document.getElementById("div").innerHTML="The divided value is:" +div;
+        }
+    </script>
+</body>
+</html>
